@@ -1,3 +1,4 @@
+import 'package:etournament_fishing/Components/Signup.dart';
 import 'package:etournament_fishing/style.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,21 +35,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-        bottomNavigationBar: const BottomBar(),
-        appBar: AppBar(
-          actions: [
-            IconButton(icon: const Icon(Icons.person_pin), onPressed: () {}),
-          ],
-          leading: IconButton(
-              icon: const Icon(Icons.menu_open_rounded), onPressed: () {}),
-          title: const Text(
-            "e-Tournament-Fishing",
-            style: TextStyle(
-              fontSize: 13,
-            ),
-          ),
-        ),
-        body: const Dashboard(),
+        body: const Signup(),
       ),
     );
   }
