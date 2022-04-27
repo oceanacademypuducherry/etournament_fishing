@@ -2,8 +2,6 @@ import 'package:etournament_fishing/Components/Signup.dart';
 import 'package:etournament_fishing/style.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'Components/Bottombar.dart';
-import 'Components/Dashboard.dart';
 
 void main() {
   runApp(const MyApp());
