@@ -32,8 +32,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Scaffold(
-        body: const Signup(),
+      home: const Scaffold(
+        body: Signup(),
       ),
     );
   }
