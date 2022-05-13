@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Controllers/StepperController.dart';
 
-class EventDetails extends StatelessWidget {
-  EventDetails({Key? key}) : super(key: key);
+class Address extends StatelessWidget {
+  Address({Key? key}) : super(key: key);
 
   StepperController stepperController = Get.find<StepperController>();
 
@@ -23,7 +23,7 @@ class EventDetails extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: 'Virtual Livewell Daily Limit ',
+                  text: 'Format ',
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -44,7 +44,7 @@ class EventDetails extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: 'Daily Top "x" Fish 5 ',
+                  text: 'Angling Platform ',
                   style: DefaultTextStyle.of(context).style,
                   children: <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -65,7 +65,7 @@ class EventDetails extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: "Boat Mfg Incentive Program? ",
+                  text: "Points Tournament ",
                   style: DefaultTextStyle.of(context).style,
                   children: <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -86,28 +86,7 @@ class EventDetails extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: "Enable Leaderboard Viewability ",
-                  style: DefaultTextStyle.of(context).style,
-                  children: <TextSpan>[
-                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
-                  ],
-                )),
-                CustomTextField(
-                  hintText: "",
-                  labelText: "",
-                  onChange: null,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: width,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                    text: TextSpan(
-                  text: "Event Registration Close Date/Time ",
+                  text: "1st Place Point Award ",
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -128,7 +107,28 @@ class EventDetails extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: "Weight Conversion ",
+                  text: "1st Place Bonus Point ",
+                  style: DefaultTextStyle.of(context).style,
+                  children: const <TextSpan>[
+                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
+                  ],
+                )),
+                CustomTextField(
+                  hintText: "",
+                  labelText: "",
+                  onChange: null,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                RichText(
+                    text: TextSpan(
+                  text: "Lake / River ",
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -150,7 +150,7 @@ class EventDetails extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                 child: ElevatedButton(
                   onPressed: () {
-                    stepperController.setStepperController(1);
+                    stepperController.setStepperController(2);
                   },
                   style: ElevatedButton.styleFrom(
                       primary: secondaryColor, fixedSize: const Size(120, 40)),
@@ -163,9 +163,7 @@ class EventDetails extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 20),
                 child: ElevatedButton(
-                  onPressed: () {
-                    stepperController.setStepperController(3);
-                  },
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                       primary: primaryColor, fixedSize: const Size(120, 40)),
                   child: const Text(

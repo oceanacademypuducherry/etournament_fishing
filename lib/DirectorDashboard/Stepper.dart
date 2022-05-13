@@ -33,7 +33,14 @@ class CustomStepper extends StatelessWidget {
       width: width,
       height: 53,
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-      decoration: const BoxDecoration(color: Colors.white),
+      decoration: const BoxDecoration(color: Colors.white, boxShadow: [
+        BoxShadow(
+          color: Colors.black12,
+          offset: Offset(1, 1),
+          blurRadius: 10,
+          spreadRadius: 0.0,
+        ),
+      ]),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

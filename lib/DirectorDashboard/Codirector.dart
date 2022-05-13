@@ -1,9 +1,13 @@
 import 'package:etournament_fishing/Components/CustomTextField.dart';
 import 'package:etournament_fishing/style.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'Controllers/StepperController.dart';
 
 class Codirector extends StatelessWidget {
-  const Codirector({Key? key}) : super(key: key);
+  Codirector({Key? key}) : super(key: key);
+
+  StepperController stepperController = Get.find<StepperController>();
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +30,8 @@ class Codirector extends StatelessWidget {
                   ],
                 )),
                 CustomTextField(
-                  hintText: "hd",
+                  hintText: "",
                   labelText: "",
-                  flag: false,
                   onChange: null,
                 ),
               ],
@@ -48,9 +51,8 @@ class Codirector extends StatelessWidget {
                   ],
                 )),
                 CustomTextField(
-                  hintText: "hd",
+                  hintText: "",
                   labelText: "",
-                  flag: false,
                   onChange: null,
                 ),
               ],
@@ -70,9 +72,8 @@ class Codirector extends StatelessWidget {
                   ],
                 )),
                 CustomTextField(
-                  hintText: "hd",
+                  hintText: "",
                   labelText: "",
-                  flag: false,
                   onChange: null,
                 ),
               ],
@@ -92,9 +93,8 @@ class Codirector extends StatelessWidget {
                   ],
                 )),
                 CustomTextField(
-                  hintText: "hd",
+                  hintText: "",
                   labelText: "",
-                  flag: false,
                   onChange: null,
                 ),
               ],
@@ -114,9 +114,8 @@ class Codirector extends StatelessWidget {
                   ],
                 )),
                 CustomTextField(
-                  hintText: "hd",
+                  hintText: "",
                   labelText: "",
-                  flag: false,
                   onChange: null,
                 ),
               ],
@@ -136,9 +135,8 @@ class Codirector extends StatelessWidget {
                   ],
                 )),
                 CustomTextField(
-                  hintText: "hd",
+                  hintText: "",
                   labelText: "",
-                  flag: false,
                   onChange: null,
                 ),
               ],
@@ -148,12 +146,14 @@ class Codirector extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
+                margin: const EdgeInsets.symmetric(vertical: 20),
                 child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(primary: primaryColor),
-// ignore: prefer_const_constructors
-                  child: Text(
+                  onPressed: () {
+                    stepperController.setStepperController(2);
+                  },
+                  style: ElevatedButton.styleFrom(
+                      primary: primaryColor, fixedSize: Size(120, 40)),
+                  child: const Text(
                     "CONTINUE",
                     style: TextStyle(fontSize: 10),
                   ),

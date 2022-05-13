@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+import 'DirectorDashboard/Controllers/StepperController.dart';
 import 'DirectorDashboard/DirectorDashboard.dart';
 import 'package:etournament_fishing/Components/Signup.dart';
 import 'package:etournament_fishing/style.dart';
@@ -5,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  Get.lazyPut(() => StepperController());
   runApp(const MyApp());
 }
 
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const Scaffold(
+      home: Scaffold(
         body: DirectorDashboard(),
       ),
     );
