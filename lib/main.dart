@@ -1,3 +1,4 @@
+import 'DirectorDashboard/DirectorDashboard.dart';
 import 'package:etournament_fishing/Components/Signup.dart';
 import 'package:etournament_fishing/style.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const Scaffold(
-        body: Signup(),
+        body: DirectorDashboard(),
       ),
     );
   }
