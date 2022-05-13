@@ -2,10 +2,7 @@ import 'package:etournament_fishing/style.dart';
 import 'package:flutter/material.dart';
 
 class Appbar extends StatelessWidget implements PreferredSizeWidget {
-  const Appbar({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
+  const Appbar({Key? key, required this.title}) : super(key: key);
 
   final title;
 

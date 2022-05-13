@@ -22,7 +22,9 @@ const currentScreen = TextStyle(
 );
 
 class CustomStepper extends StatelessWidget {
-  const CustomStepper({Key? key}) : super(key: key);
+  const CustomStepper({Key? key, required this.page}) : super(key: key);
+
+  final int page;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class CustomStepper extends StatelessWidget {
     return Container(
       width: width,
       height: 53,
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       decoration: const BoxDecoration(color: Colors.white),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,13 +41,17 @@ class CustomStepper extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   "Co-director",
-                  style: currentScreen,
+                  style: page == 1
+                      ? currentScreen
+                      : page <= 1
+                          ? unSelected
+                          : selected,
                 ),
                 Container(
                   width: 20,
-                  child: Divider(
+                  child: const Divider(
                     height: 10,
                     thickness: 1,
                     color: unSelectedColor,
@@ -58,9 +64,13 @@ class CustomStepper extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   "Event details",
-                  style: unSelected,
+                  style: page == 2
+                      ? currentScreen
+                      : page <= 2
+                          ? unSelected
+                          : selected,
                 ),
                 Container(
                   width: 20,
@@ -79,7 +89,11 @@ class CustomStepper extends StatelessWidget {
               children: [
                 Text(
                   "Address",
-                  style: unSelected,
+                  style: page == 3
+                      ? currentScreen
+                      : page <= 3
+                          ? unSelected
+                          : selected,
                 ),
                 Container(
                   width: 20,
@@ -98,7 +112,11 @@ class CustomStepper extends StatelessWidget {
               children: [
                 Text(
                   "Address2",
-                  style: unSelected,
+                  style: page == 4
+                      ? currentScreen
+                      : page <= 4
+                          ? unSelected
+                          : selected,
                 ),
                 Container(
                   width: 20,
@@ -117,11 +135,15 @@ class CustomStepper extends StatelessWidget {
               children: [
                 Text(
                   "Event docs",
-                  style: unSelected,
+                  style: page == 5
+                      ? currentScreen
+                      : page <= 5
+                          ? unSelected
+                          : selected,
                 ),
                 Container(
                   width: 20,
-                  child: Divider(
+                  child: const Divider(
                     height: 10,
                     thickness: 1,
                     color: unSelectedColor,
