@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Controllers/StepperController.dart';
 
-class Address extends StatelessWidget {
-  Address({Key? key}) : super(key: key);
+class Address2 extends StatelessWidget {
+  Address2({Key? key}) : super(key: key);
 
   StepperController stepperController = Get.find<StepperController>();
 
@@ -23,7 +23,7 @@ class Address extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: 'Format ',
+                  text: 'Co-Directors ',
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -44,49 +44,7 @@ class Address extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: 'Angling Platform ',
-                  style: DefaultTextStyle.of(context).style,
-                  children: <TextSpan>[
-                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
-                  ],
-                )),
-                CustomTextField(
-                  hintText: "",
-                  labelText: "",
-                  onChange: null,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: width,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                    text: TextSpan(
-                  text: "Points Tournament ",
-                  style: DefaultTextStyle.of(context).style,
-                  children: <TextSpan>[
-                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
-                  ],
-                )),
-                CustomTextField(
-                  hintText: "",
-                  labelText: "",
-                  onChange: null,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: width,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                    text: TextSpan(
-                  text: "1st Place Point Award ",
+                  text: 'Organization Name ',
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -107,7 +65,7 @@ class Address extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: "1st Place Bonus Point ",
+                  text: "Series Name ",
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -128,7 +86,49 @@ class Address extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: "Lake / River ",
+                  text: "Division Area ",
+                  style: DefaultTextStyle.of(context).style,
+                  children: const <TextSpan>[
+                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
+                  ],
+                )),
+                CustomTextField(
+                  hintText: "",
+                  labelText: "",
+                  onChange: null,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                RichText(
+                    text: TextSpan(
+                  text: "Event Name ",
+                  style: DefaultTextStyle.of(context).style,
+                  children: const <TextSpan>[
+                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
+                  ],
+                )),
+                CustomTextField(
+                  hintText: "",
+                  labelText: "",
+                  onChange: null,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                RichText(
+                    text: TextSpan(
+                  text: "Event Type ",
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -150,7 +150,7 @@ class Address extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                 child: ElevatedButton(
                   onPressed: () {
-                    stepperController.setStepperController(2);
+                    stepperController.setStepperController(3);
                   },
                   style: ElevatedButton.styleFrom(
                       primary: secondaryColor, fixedSize: const Size(120, 40)),
@@ -164,7 +164,7 @@ class Address extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(vertical: 20),
                 child: ElevatedButton(
                   onPressed: () {
-                    stepperController.setStepperController(4);
+                    stepperController.setStepperController(5);
                   },
                   style: ElevatedButton.styleFrom(
                       primary: primaryColor, fixedSize: const Size(120, 40)),

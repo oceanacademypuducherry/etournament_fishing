@@ -1,14 +1,17 @@
 import 'package:etournament_fishing/Components/Appbar.dart';
+import 'package:etournament_fishing/Components/Bottombar.dart';
 import 'package:etournament_fishing/Components/CustomTextField.dart';
 import 'package:etournament_fishing/DirectorDashboard/Address.dart';
+import 'package:etournament_fishing/DirectorDashboard/Address2.dart';
 import 'package:etournament_fishing/DirectorDashboard/Codirector.dart';
 import 'package:etournament_fishing/DirectorDashboard/DirectorDashboardDescription.dart';
 import 'package:etournament_fishing/DirectorDashboard/EventDetails.dart';
-import 'package:etournament_fishing/DirectorDashboard/Stepper.dart';
+import 'package:etournament_fishing/DirectorDashboard/EventDocs.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'Controllers/StepperController.dart';
+import 'DirectorDashboardBottombar.dart';
+import 'Stepper/Stepper.dart';
 
 class DirectorDashboard extends StatelessWidget {
   DirectorDashboard({Key? key}) : super(key: key);
@@ -21,6 +24,7 @@ class DirectorDashboard extends StatelessWidget {
         appBar: const Appbar(
           title: 'Director Dashboard',
         ),
+        bottomNavigationBar: DirectorDashboardBottombar(),
         body: Stack(
           children: [
             Column(
@@ -43,6 +47,10 @@ class DirectorDashboard extends StatelessWidget {
                           EventDetails(),
                         if (stepperController.stepperCount.value == 3)
                           Address(),
+                        if (stepperController.stepperCount.value == 4)
+                          Address2(),
+                        if (stepperController.stepperCount.value == 5)
+                          EventDocs(),
                       ],
                     ),
                   ),

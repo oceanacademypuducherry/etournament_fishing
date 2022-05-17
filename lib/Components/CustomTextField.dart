@@ -5,6 +5,7 @@ class CustomTextField extends StatelessWidget {
       {Key? key,
       required this.hintText,
       required this.labelText,
+      this.focusNode,
       this.flag,
       required this.onChange})
       : super(key: key);
@@ -13,6 +14,7 @@ class CustomTextField extends StatelessWidget {
   String hintText;
   bool? flag;
   final onChange;
+  FocusNode? focusNode;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +23,7 @@ class CustomTextField extends StatelessWidget {
       height: 50,
       width: MediaQuery.of(context).size.width,
       child: TextField(
+        focusNode: focusNode,
         obscureText: flag != null && true,
         decoration: InputDecoration(
           border: const OutlineInputBorder(),
