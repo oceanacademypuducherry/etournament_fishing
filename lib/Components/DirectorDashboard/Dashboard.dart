@@ -1,6 +1,6 @@
 import 'package:etournament_fishing/style.dart';
 import 'package:flutter/material.dart';
-import 'Bottombar.dart';
+import '../Bottombar.dart';
 import 'ExpandableCard.dart';
 import 'CardDesign.dart';
 import 'Titlebar.dart';

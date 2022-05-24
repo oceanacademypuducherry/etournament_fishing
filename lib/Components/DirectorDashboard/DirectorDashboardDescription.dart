@@ -10,12 +10,12 @@ class DirectorDashboardDescription extends StatelessWidget {
     return Container(
       height: 100,
       width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.all(20),
       decoration: const BoxDecoration(color: lightGreen),
       child: const Center(
         child: Text(
-          "HI Josh, to setup and publish your tournament,"
-          " you must update each of the sections above before submitting...",
+          "Complete the form below to include both info ... for both anglers in"
+          "a Team event otherwise just Angler 1 is required",
           textAlign: TextAlign.center,
           style: TextStyle(
               color: textColor, fontSize: 13, fontWeight: FontWeight.w100),

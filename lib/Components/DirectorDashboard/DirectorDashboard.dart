@@ -1,17 +1,15 @@
 import 'package:etournament_fishing/Components/Appbar.dart';
-import 'package:etournament_fishing/Components/Bottombar.dart';
-import 'package:etournament_fishing/Components/CustomTextField.dart';
-import 'package:etournament_fishing/DirectorDashboard/Address.dart';
-import 'package:etournament_fishing/DirectorDashboard/Address2.dart';
-import 'package:etournament_fishing/DirectorDashboard/Codirector.dart';
-import 'package:etournament_fishing/DirectorDashboard/DirectorDashboardDescription.dart';
-import 'package:etournament_fishing/DirectorDashboard/EventDetails.dart';
-import 'package:etournament_fishing/DirectorDashboard/EventDocs.dart';
+import 'package:etournament_fishing/Components/DirectorDashboard/Address.dart';
+import 'package:etournament_fishing/Components/DirectorDashboard/Address2.dart';
+import 'package:etournament_fishing/Components/DirectorDashboard/Codirector.dart';
+import 'package:etournament_fishing/Components/DirectorDashboard/Controllers/StepperController.dart';
+import 'package:etournament_fishing/Components/DirectorDashboard/DirectorDashboardBottombar.dart';
+import 'package:etournament_fishing/Components/DirectorDashboard/DirectorDashboardDescription.dart';
+import 'package:etournament_fishing/Components/DirectorDashboard/EventDetails.dart';
+import 'package:etournament_fishing/Components/DirectorDashboard/EventDocs.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'Controllers/StepperController.dart';
-import 'DirectorDashboardBottombar.dart';
-import 'Stepper/Stepper.dart';
+import '../Stepper/Stepper.dart';
 
 class DirectorDashboard extends StatelessWidget {
   DirectorDashboard({Key? key}) : super(key: key);
@@ -30,8 +28,14 @@ class DirectorDashboard extends StatelessWidget {
             Column(
               children: [
                 const DirectorDashboardDescription(),
-                Obx(() =>
-                    CustomStepper(page: stepperController.stepperCount.value)),
+                Obx(() => CustomStepper(
+                      page: stepperController.stepperCount.value,
+                      step1: "Co-director",
+                      step2: "Event details",
+                      step3: "Address",
+                      step4: "Address 2",
+                      step5: "Event docs",
+                    )),
               ],
             ),
             Container(

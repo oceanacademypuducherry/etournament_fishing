@@ -1,3 +1,4 @@
+import 'package:etournament_fishing/Components/CustomDropdown.dart';
 import 'package:etournament_fishing/Components/CustomTextField.dart';
 import 'package:etournament_fishing/style.dart';
 import 'package:flutter/material.dart';
@@ -44,97 +45,12 @@ class Codirector extends StatelessWidget {
                           text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 20, top: 10),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.black38, width: 1),
-                      borderRadius: BorderRadius.circular(2),
-                    ),
-                    child: DropdownButton(
-                      value: "United Kingdom",
-                      items: [
-                        DropdownMenuItem(
-                          child: Container(
-                              margin: const EdgeInsets.only(left: 15),
-                              // color: Colors.white,
-                              height: MediaQuery.of(context).size.height,
-                              width: MediaQuery.of(context).size.width,
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  right:
-                                      BorderSide(width: 1, color: Colors.grey),
-                                ),
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: const [
-                                  Text("Select any option"),
-                                ],
-                              )),
-                          value: "United Kingdom",
-                        ),
-                        DropdownMenuItem(
-                          child: Container(
-                              margin: const EdgeInsets.only(left: 15),
-                              // color: Colors.white,
-                              height: MediaQuery.of(context).size.height,
-                              width: MediaQuery.of(context).size.width,
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  right:
-                                      BorderSide(width: 1, color: Colors.grey),
-                                ),
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: const [
-                                  Text("Lorem"),
-                                ],
-                              )),
-                          value: "Lorem",
-                        ),
-                        DropdownMenuItem(
-                          child: Container(
-                              margin: const EdgeInsets.only(left: 15),
-                              // color: Colors.white,
-                              height: MediaQuery.of(context).size.height,
-                              width: MediaQuery.of(context).size.width,
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  right:
-                                      BorderSide(width: 1, color: Colors.grey),
-                                ),
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: const [
-                                  Text("Lorem ipsum"),
-                                ],
-                              )),
-                          value: "Lorem ipsum",
-                        ),
-                      ],
-                      onChanged: (value) {
-                        //get value when changed
-                        print("You have selected $value");
-                      },
-                      icon: const Padding(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                        child: Icon(Icons.arrow_drop_down),
-                      ),
-                      // iconEnabledColor: Colors.white, //Icon color
-                      style: const TextStyle(
-                        color: Colors.black54, //Font color
-                        fontSize: 12,
-                      ),
-
-                      dropdownColor: Colors.white, //dropdown background color
-                      underline: Container(), //remove underline
-                      isExpanded: true, //make true to make width 100%
-                    ),
-                  )
+                  CustomTextField(
+                    focusNode: eventTimeZone,
+                    hintText: "",
+                    labelText: "",
+                    onChange: null,
+                  ),
                 ],
               ),
             ),
@@ -197,11 +113,7 @@ class Codirector extends StatelessWidget {
                           text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
-                  CustomTextField(
-                    hintText: "",
-                    labelText: "",
-                    onChange: null,
-                  ),
+                  CustomDropdown(values: ["android", "IOS", "Desktop", "Web"]),
                 ],
               ),
             ),
@@ -219,11 +131,7 @@ class Codirector extends StatelessWidget {
                           text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
-                  CustomTextField(
-                    hintText: "",
-                    labelText: "",
-                    onChange: null,
-                  ),
+                  CustomDropdown(values: ["android", "IOS", "Desktop", "Web"]),
                 ],
               ),
             ),
@@ -241,11 +149,8 @@ class Codirector extends StatelessWidget {
                           text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
-                  CustomTextField(
-                    hintText: "",
-                    labelText: "",
-                    onChange: null,
-                  ),
+                  CustomDropdown(
+                      values: const ["android", "IOS", "Desktop", "Web"]),
                 ],
               ),
             ),

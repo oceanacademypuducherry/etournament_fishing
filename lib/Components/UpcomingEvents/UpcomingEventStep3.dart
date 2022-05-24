@@ -1,11 +1,12 @@
 import 'package:etournament_fishing/Components/CustomTextField.dart';
+import 'package:etournament_fishing/Components/DirectorDashboard/Controllers/StepperController.dart';
 import 'package:etournament_fishing/style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'Controllers/StepperController.dart';
+import '../CustomDropdown.dart';
 
-class EventDetails extends StatelessWidget {
-  EventDetails({Key? key}) : super(key: key);
+class UpcomingEventStep3 extends StatelessWidget {
+  UpcomingEventStep3({Key? key}) : super(key: key);
 
   StepperController stepperController = Get.find<StepperController>();
 
@@ -23,7 +24,7 @@ class EventDetails extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: 'Virtual Livewell Daily Limit ',
+                  text: 'Angler 2 Email ',
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -44,70 +45,7 @@ class EventDetails extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: 'Daily Top "x" Fish 5 ',
-                  style: DefaultTextStyle.of(context).style,
-                  children: <TextSpan>[
-                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
-                  ],
-                )),
-                CustomTextField(
-                  hintText: "",
-                  labelText: "",
-                  onChange: null,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: width,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                    text: TextSpan(
-                  text: "Boat Mfg Incentive Program? ",
-                  style: DefaultTextStyle.of(context).style,
-                  children: <TextSpan>[
-                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
-                  ],
-                )),
-                CustomTextField(
-                  hintText: "",
-                  labelText: "",
-                  onChange: null,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: width,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                    text: TextSpan(
-                  text: "Enable Leaderboard Viewability ",
-                  style: DefaultTextStyle.of(context).style,
-                  children: <TextSpan>[
-                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
-                  ],
-                )),
-                CustomTextField(
-                  hintText: "",
-                  labelText: "",
-                  onChange: null,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: width,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                    text: TextSpan(
-                  text: "Event Registration Close Date/Time ",
+                  text: 'Angler 2 Address_1 ',
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -128,7 +66,70 @@ class EventDetails extends StatelessWidget {
               children: [
                 RichText(
                     text: TextSpan(
-                  text: "Weight Conversion ",
+                  text: "Angler 2 Address_2 ",
+                  style: DefaultTextStyle.of(context).style,
+                  children: const <TextSpan>[
+                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
+                  ],
+                )),
+                CustomTextField(
+                  hintText: "",
+                  labelText: "",
+                  onChange: null,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                RichText(
+                    text: TextSpan(
+                  text: "Angler 2 City ",
+                  style: DefaultTextStyle.of(context).style,
+                  children: const <TextSpan>[
+                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
+                  ],
+                )),
+                CustomTextField(
+                  hintText: "",
+                  labelText: "",
+                  onChange: null,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                RichText(
+                    text: TextSpan(
+                  text: "Angler 2 State/Province ",
+                  style: DefaultTextStyle.of(context).style,
+                  children: const <TextSpan>[
+                    TextSpan(text: '*', style: TextStyle(color: requiredColor)),
+                  ],
+                )),
+                CustomTextField(
+                  hintText: "",
+                  labelText: "",
+                  onChange: null,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                RichText(
+                    text: TextSpan(
+                  text: "Angler 2 Postal Code/ZIP ",
                   style: DefaultTextStyle.of(context).style,
                   children: const <TextSpan>[
                     TextSpan(text: '*', style: TextStyle(color: requiredColor)),
@@ -150,12 +151,12 @@ class EventDetails extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                 child: ElevatedButton(
                   onPressed: () {
-                    stepperController.setStepperController(1);
+                    stepperController.setStepperController(2);
                   },
                   style: ElevatedButton.styleFrom(
                       primary: secondaryColor, fixedSize: const Size(120, 40)),
                   child: const Text(
-                    "BACK",
+                    "Back",
                     style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -164,12 +165,12 @@ class EventDetails extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(vertical: 20),
                 child: ElevatedButton(
                   onPressed: () {
-                    stepperController.setStepperController(3);
+                    stepperController.setStepperController(4);
                   },
                   style: ElevatedButton.styleFrom(
                       primary: primaryColor, fixedSize: const Size(120, 40)),
                   child: const Text(
-                    "CONTINUE",
+                    "Continue",
                     style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
                   ),
                 ),
