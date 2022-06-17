@@ -13,52 +13,49 @@ class DirectorDashboardBottombar extends StatelessWidget {
       height: height,
       child: Row(
         children: [
-          Stack(
-            children: [
-              Container(
-                width: MediaQuery.of(context).size.width / 3,
-                height: 50,
-                decoration: const BoxDecoration(
+          Container(
+            width: MediaQuery.of(context).size.width / 3,
+            height: 50,
+            decoration: const BoxDecoration(
+              color: primaryColor,
+              border: Border(
+                left: BorderSide(
                   color: primaryColor,
-                  border: Border(
-                    left: BorderSide(
-                      color: primaryColor,
-                      width: 0.2,
-                    ),
-                  ),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Tournament Setup",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 10),
-                  ),
+                  width: 0.2,
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(top: 5),
-                width: MediaQuery.of(context).size.width / 3,
-                height: 50,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: 5,
-                      width: 5,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(50),
+            ),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 5),
+                    width: MediaQuery.of(context).size.width,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 5,
+                          width: 5,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(50),
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
-              )
-            ],
+                  ),
+                  Text(
+                    "Tournament Setup",
+                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 10),
+                  ),
+                ],
+              ),
+            ),
           ),
           Container(
             width: MediaQuery.of(context).size.width / 3,

@@ -41,12 +41,10 @@ class Codirector extends StatelessWidget {
                     text: 'Event End Time ',
                     style: DefaultTextStyle.of(context).style,
                     children: const <TextSpan>[
-                      TextSpan(
-                          text: '*', style: TextStyle(color: requiredColor)),
+                      TextSpan(text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
                   CustomTextField(
-                    focusNode: eventTimeZone,
                     hintText: "",
                     labelText: "",
                     onChange: null,
@@ -64,12 +62,10 @@ class Codirector extends StatelessWidget {
                     text: 'Event Time Zone ',
                     style: DefaultTextStyle.of(context).style,
                     children: const <TextSpan>[
-                      TextSpan(
-                          text: '*', style: TextStyle(color: requiredColor)),
+                      TextSpan(text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
                   CustomTextField(
-                    focusNode: eventTimeZone,
                     hintText: "",
                     labelText: "",
                     onChange: null,
@@ -87,8 +83,7 @@ class Codirector extends StatelessWidget {
                     text: "Event Geo-Location Time ",
                     style: DefaultTextStyle.of(context).style,
                     children: const <TextSpan>[
-                      TextSpan(
-                          text: '*', style: TextStyle(color: requiredColor)),
+                      TextSpan(text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
                   CustomTextField(
@@ -109,8 +104,7 @@ class Codirector extends StatelessWidget {
                     text: "Species ",
                     style: DefaultTextStyle.of(context).style,
                     children: const <TextSpan>[
-                      TextSpan(
-                          text: '*', style: TextStyle(color: requiredColor)),
+                      TextSpan(text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
                   CustomDropdown(values: ["android", "IOS", "Desktop", "Web"]),
@@ -127,8 +121,7 @@ class Codirector extends StatelessWidget {
                     text: "Placement Ranking Type ",
                     style: DefaultTextStyle.of(context).style,
                     children: const <TextSpan>[
-                      TextSpan(
-                          text: '*', style: TextStyle(color: requiredColor)),
+                      TextSpan(text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
                   CustomDropdown(values: ["android", "IOS", "Desktop", "Web"]),
@@ -145,12 +138,10 @@ class Codirector extends StatelessWidget {
                     text: "Weight Conversion ",
                     style: DefaultTextStyle.of(context).style,
                     children: const <TextSpan>[
-                      TextSpan(
-                          text: '*', style: TextStyle(color: requiredColor)),
+                      TextSpan(text: '*', style: TextStyle(color: requiredColor)),
                     ],
                   )),
-                  CustomDropdown(
-                      values: const ["android", "IOS", "Desktop", "Web"]),
+                  CustomDropdown(values: const ["android", "IOS", "Desktop", "Web"]),
                 ],
               ),
             ),
@@ -163,8 +154,7 @@ class Codirector extends StatelessWidget {
                     onPressed: () {
                       stepperController.setStepperController(2);
                     },
-                    style: ElevatedButton.styleFrom(
-                        primary: primaryColor, fixedSize: Size(120, 40)),
+                    style: ElevatedButton.styleFrom(primary: primaryColor, fixedSize: Size(120, 40)),
                     child: const Text(
                       "CONTINUE",
                       style: TextStyle(fontSize: 10),

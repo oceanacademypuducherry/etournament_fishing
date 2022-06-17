@@ -1,9 +1,9 @@
+import 'package:etournament_fishing/Components/CustomTextField.dart';
+import 'package:etournament_fishing/style.dart';
 import 'package:flutter/material.dart';
-import '../style.dart';
-import '../Components/CustomTextField.dart';
 
-class Components.Signup extends StatelessWidget {
-  const Components.Signup({Key? key}) : super(key: key);
+class Signup extends StatelessWidget {
+  const Signup({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

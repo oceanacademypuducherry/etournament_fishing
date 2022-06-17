@@ -1,3 +1,4 @@
+import 'package:etournament_fishing/Components/DirectorDashboard/DirectorDashboard.dart';
 import 'package:etournament_fishing/style.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-        body: UpcomingEventsDataCollection(),
+        body: DirectorDashboard(),
       ),
     );
   }
